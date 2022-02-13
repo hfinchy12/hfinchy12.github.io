@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+
 html{
     scroll-behavior: smooth;
 }
@@ -148,10 +154,11 @@ header{
 }
 
 .credits{
+    background-color:rgb(3,16,28);
     text-align: center;
-    color: black;   
-    font-size: 10px;
+    color: white;   
+    font-size: 12px;
 }
 #cred-link{
-    color:blue;
+    color:skyblue;
 }
