@@ -1,21 +1,157 @@
-* {
-  margin:0px;
-  padding:0px;
+html{
+    scroll-behavior: smooth;
 }
-
-#octocat {
-  display: block;
-  width:384px;
-  margin: 50px auto;
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
 }
-
-p {
-  display: block;
-  width: 400px;
-  margin: 50px auto;
-  font: 30px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
-  color: rgb(255, 255, 255);
+  
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 body {
-  background-color: rgb(80, 0, 0); 
+    font-family: 'Courier New', monospace;
+    margin: 0;
+}
+
+.jumpPoint::before {
+	content: "";
+    display: block;
+    height: 50px;
+    margin: -50px 0 0;
+}
+
+
+
+a {
+  text-decoration: none;
+  color:white;
+}
+
+.bar{
+    display: flex;
+}
+
+
+header{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    font-size: 20px;
+    /* border-bottom: 1px solid #ccc; */ 
+    padding: 5px;
+    /* background-color:rgb(1, 27, 53); */
+    background-color:rgb(3,16,28); /* haha nice*/
+    color: white;
+    justify-content: flex-end;
+}
+
+#myNameOnHeader {
+    flex: 1;
+    font-size: 45px;
+    margin: 0%;
+    display: inline-block;
+    justify-content: center;
+    padding-top: 0px; 
+    padding-bottom: 0px;
+    padding-left: 20px;
+}
+/* header li{
+    display: flex;
+    flex: 1;
+} */
+
+.site-navigation {
+    display: inline-block;
+    flex: 1;
+    margin: 0; 
+    padding: 0;
+    list-style: none;
+}
+
+#navbar{
+    list-style: none;
+    justify-content: right;
+    /* padding: 22px; */
+    padding-top: 15px;
+    display: flex;
+    margin: 0;
+    padding-right: 10px;
+    margin-right: 10px;
+
+}
+#about{
+    padding-right: 30px;
+}
+#projects{
+    padding-right: 30px;
+}
+#contact{
+    padding-right: 0px;
+} 
+
+#navbar li a{
+    transition: all 0.25s ease 0s;
+}
+#navbar li a:hover{
+    color: lightskyblue;
+}
+
+/* Main Content*/
+.bodyArea{
+    color: white;
+    margin-top: 50px;
+    display: flex;
+}
+
+.introduction{
+    background-image: url(xwing-bg.jpeg);
+    background-position: 0px 0px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-size: 25px;
+    padding-top: 20px;
+    display: block;
+    background-color: transparent;
+    text-align: center;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    padding-bottom: 45%;
+}
+
+.part1{
+    text-align: center;
+    display: block;
+    padding: 5px;
+    /* background-color: rgb(209, 237, 142); */
+    /* background-color: rgb(217, 230, 126); */
+    background-color: rgb(232, 242, 157);
+    color:rgb(3,16,28);
+}
+.part2{
+    display: block;
+    padding: 5px;
+    background-color: skyblue;
+    color: red;
+    text-align: center;
+}
+.part3{
+    display: block;
+    padding: 5px;
+    background-color: rgb(232, 242, 157);
+    color:rgb(3,16,28);
+    text-align: center;
+}
+
+.credits{
+    text-align: center;
+    color: black;   
+    font-size: 10px;
+}
+#cred-link{
+    color:blue;
 }
