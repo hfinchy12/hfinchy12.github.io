@@ -25,8 +25,8 @@ body {
 .jumpPoint::before {
 	content: "";
     display: block;
-    height: 50px;
-    margin: -50px 0 0;
+    height: 60px;
+    margin: -60px 0 0;
 }
 
 
@@ -126,31 +126,44 @@ header{
     width: 100%;
     align-content: center;
     justify-content: center;
-    padding-bottom: 45%;
+    padding-bottom: 40%;
 }
 
 .part1{
     text-align: center;
     display: block;
-    padding: 5px;
-    /* background-color: rgb(209, 237, 142); */
-    /* background-color: rgb(217, 230, 126); */
+    padding: 10px;
+    padding-bottom: 30px;
+    padding-left: 10%;
+    padding-right: 10%;
     background-color: rgb(232, 242, 157);
     color:rgb(3,16,28);
+    font-size: 24px;
 }
 .part2{
     display: block;
     padding: 5px;
+    padding-bottom: 30px;
+    padding-left: 10%;
+    padding-right: 10%;
     background-color: skyblue;
-    color: red;
+    color: black;
     text-align: center;
+    font-size: 24px;
 }
 .part3{
     display: block;
-    padding: 5px;
+    padding-bottom: 80px;
+    padding-left: 10%;
+    padding-right: 10%;
     background-color: rgb(232, 242, 157);
     color:rgb(3,16,28);
     text-align: center;
+    font-size: 24px;
+}
+
+#email-link{
+    color:darkblue;
 }
 
 .credits{
