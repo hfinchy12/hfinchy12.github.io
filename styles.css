@@ -46,9 +46,7 @@ header{
     position: fixed;
     width: 100%;
     font-size: 20px;
-    /* border-bottom: 1px solid #ccc; */ 
     padding: 5px;
-    /* background-color:rgb(1, 27, 53); */
     background-color:rgb(3,16,28); /* haha nice*/
     color: white;
     justify-content: flex-end;
@@ -163,6 +161,12 @@ header{
 }
 
 #email-link{
+    color:darkblue;
+}
+#linkedinLink{
+    color:darkblue;
+}
+#githubLink{
     color:darkblue;
 }
 
