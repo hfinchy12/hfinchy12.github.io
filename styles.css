@@ -115,8 +115,10 @@ header{
 
 .introduction{
     background-image: url(xwing-bg.jpeg);
-    background-position: 0px 0px;
-    background-size: 100%;
+    /* background-position: 0px 0px; */
+    background-position: top center;
+    /* background-size: 100%; */
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-size: 25px;
