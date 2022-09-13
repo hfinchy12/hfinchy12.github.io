@@ -1,151 +1,121 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunter Finch - Home</title>
     <link href="styles.css" rel="stylesheet">
-    <title>Hunter Finch</title>
+    <!-- <link href="styles2.css" rel="stylesheet"> -->
+    <!-- <link rel="icon" type="image/x-icon" href="/images/favicon.ico"> -->
+    <script>
+        var theme = document.getElementsByTagName('link')[0];
+        theme.setAttribute('href', localStorage.getItem('css'));
+
+        function loadstyle() {
+            if (localStorage.getItem('css') == null) { // if no prev style, load default
+                theme.setAttribute('href', 'styles.css');
+            } else {
+                theme.setAttribute('href', localStorage.getItem('css'));
+            }
+        }
+
+        function toggleTheme() {
+            if (theme.getAttribute('href') == 'styles.css') {
+                localStorage.setItem("css", "styles2.css");
+                theme.setAttribute('href', localStorage.getItem("css"));
+            } else {
+                localStorage.setItem("css", "styles.css");
+                theme.setAttribute('href', localStorage.getItem("css"));
+            }
+        }
+        loadstyle(); // do right away
+    </script>
 </head>
 
-
-
-<body>
-    <div class = "bar">
-        <header class="site-header">
-            <a href="#" id="myNameOnHeader">Hunter Finch</a>
-            <nav class="site-navigation">
-                <ul id="navbar">
-                    <li id= "about"><a href="#jumpToAboutMe">About Me</a></li>
-                    <li id= "projects"><a href="#jumpToProjects">Projects</a></li>
-                    <li id= "contact"><a href="#jumpToContacts">Contact</a></li>
+<body id="body">
+    <div class="outer-wrapper">
+        <div class="navbar">
+            <nav class='navnav'>
+                <ul class="navitems">
+                    <li id="homelink"><a href="#">Home</a></li>
+                    <li><a href="./projects_v2.html">Projects</a></li>
+                    <li><a href="./skills.html">Skills</a></li>
+                    <li><a href="./service.html">Service</a></li>
                 </ul>
+
             </nav>
-        </header>
-    </div>
-        
+            <nav class="togglebutton">
+                <button class="toggle" onclick="toggleTheme()">Toggle!</button>
+                <!-- <ul class="toggle">
+                    <li><a href="#">Toggle!</a></li>
+                </ul> -->
+            </nav>
+        </div>
 
+        <div class="about_wrapper">
+            <div class="about_inner">
+                <div class="aboutpanel">
+                    <section class="intro" id="zen-intro">
+                        <header role="banner">
+                            <h1 id="welcome">Welcome.</h1>
+                        </header>
 
-    <div class = "bodyArea">
-        <main>
-            <section class="introduction">
-                <div class= "introstatement">
-                    <h1>Howdy, </br>my name is Hunter Finch,</br>welcome to my website!</h1>
+                        <div class="aboutme" id="aboutme" role="article">
+                            <p>Howdy! My name is <a href="https://www.linkedin.com/in/hunter-finch" target="_blank" id="namelink">Hunter Finch</a> and I am a computer science student at
+                                <a href="https://www.tamu.edu/" id="tamu" target="_blank">Texas A&M University, </a> <br><b>Gig 'em!</b></p>
+                        </div>
+                    </section>
+
                 </div>
-            </section>
-            <a class="jumpPoint" id="jumpToAboutMe"></a>
-            <div class= "part1">
-                <h2>About Me</h2></br>
-                <p>
-                    Howdy! I am a junior computer science major at Texas A&M University.
-                    I decided to create this website page to give people a quick and easy way to learn more about me.
-                    <!--The reason I decided to study computer science is because of the instant gratification the programming enables.
-                    No other field is able to create something right in front of your eyes and then share it to the world.-->
-                    Apart from coding, my hobbies include video games, watching football (especially aggie football), and hanging with friends.
-                    And if you cannot tell from the background picture above, I love anything Star Wars.
-                <br>
-                <br>
-                    Below I have listed a few of the projects I have worked on, both for school and independently.
-                    Some projects are available on my Github while some are kept private due to privacy. 
-                    However, if you would like to view the program please reach out and I will gladly share.
-                    If you have any questions at all, or would like to see more, do not at all hesitate to reach out.
-                    
-                </p><br>
-            </div>
-            <a class="jumpPoint" id="jumpToProjects"></a>
-            <div class = "part2">
-                <h2 id= "projectsTitle">Projects</h2>
-                <div>
-                    <h3>Aggie Ticket Assistant</h3>
-                    <h6>Work in Progress</h6>
-                    <p>
-                        Working with a team to develop a mobile application to assist Aggies with pulling tickets for football games. 
-                        The main feature of this application is a ticket-pulling algorithm designed to ensure that students get the best seats possible.
-                        The application is meant to be easy to use while still being useful to us Aggies.
-                        Lots of other informations is also displayed to give Aggies the best game-day experience possible.
-                        <br><br>
-                        This application uses React Native, HTML, CSS, and Javascript for the front-end. 
-                        The back-end is made up of React Native, Javascript, and is supported by Firebase database.
-                        Our team is using Git/Github as a version control platform. 
-                    </p><br><br>
+                <div class="aboutpanel">
+                    <div class="part1" id="part1id" role="article">
+                        <h3>About Me</h3>
+                        <p id="aboutmeid">
+                            Ever since I was young, I have been captivated by technology and its ability to make my life easier. Now I have reached the point in my life where I get to create software to fascinate others. Through my learning experiences, I have gotten to see how
+                            programs can take in simple data, and turn that into something useful - something that makes you say "woah that was cool". My education experiences have given me a mere glimpse of the power of data and algorithms, yet I understand
+                            I have hardly scratched the surface. Although I am not certain, I am currently interested in <a href="https://en.wikipedia.org/wiki/Machine_learning" target="_blank" id="MLlink">machine learning</a>                            and the endless opportunities that it can create. I am currently looking for an internship in software engineering to develop my technical skills, as well as refine my personal interest to choose a field of study to pursue
+                            full-time.
+                            <br><br> Apart from coding, I enjoy listening to music and anything outdoors (especially at the same). I hope to one day travel all across the world and visit the <a href="https://www.harpersbazaar.com/culture/travel-dining/g7171/most-beautiful-places-in-the-world/"
+                                target="_blank" id="MLlink">most beautiful places on earth</a>.
+                        </p>
+                    </div>
+
                 </div>
-                <div>
-                    <h3>Dungeon Crawler</h3>
-                    <h6>Assignment completed in CSCE 121: Programming Design and Concepts</h6>
-                    <h6>Available on GitHub</h6>
-                    <p>
-                        Dungeon Crawler is a game where the explorer must escape from the dungeon he is trapped in.
-                        Within the dungeon there are deadly monsters, treasures, and a couple of magical surprises.
-                        With a few different map choices, the dungeons can pose a challenge to even the most skilled explorers.
-                    </p><br><br>
+                <div class="aboutpanel">
+                    <div class="picsss">
+                        <a href="https://skyranch.org/" target="_blank" class="pics">
+                            <img src="me.jpg" alt="Me (middle)" id="kyle" />
+                        </a>
+                    </div>
+
                 </div>
-                <div>
-                    <h3>Network Router Simulator</h3>
-                    <h6>Assignment completed in CSCE 221: Data Structures and Algorithms</h6>
-                    <h6>Available on GitHub</h6>
-                    <p>
-                        Simulated a network packet processing queue in C++. <br>
-                        This program reads in sample network packets and processes the packets into a linked list.
-                        This program uses: dynamic memory, linked list, queues, file input, classes, templating, and data filtering.
-                        Packets are read in through a text file and then processesd to create a "NetworkPacket" object. 
-                        Those objects are then sorted based on their content as well as scanned for suspicious input/blocked addresses. 
-                        A linked list is used as the queue to demonstrate a "first-in first-out" approach to handling data. 
-                    </p><br><br>
+                <div class="aboutpanel">
+                    <div class="footer">
+                        <p id="contactme">Contact Me!</p>
+                        <!-- <p class="contactli">hunter.finch@icloud.com</p> -->
+                        <!-- <p class="contactli">hf9154@tamu.edu</p> -->
+                        <a href="mailto: hunter.finch@icloud.com" class="contactli">hunter.finch@icloud.com</a>
+                        <a href="mailto: hf9154@tamu.edu" class="contactli">hf9154@tamu.edu</a>
+                        <!-- <p class="contactli">Linkedin</p> -->
+                        <a href="https://www.linkedin.com/in/hunter-finch" target="_blank" class="contactli" id="linked">Linkedin</a>
+                        <!-- <ul class="footerlist">
+                            <li class="contactli">hunter.finch@icloud.com</li>
+                            <li class="contactli">hf9154@tamu.edu</li>
+                            <li class="contactli">linkedin</li>
+                        </ul> -->
+                    </div>
+
                 </div>
-                <div>
-                    <h3>Color Clicker</h3>
-                    <h6>Available on GitHub</h6>
-                    <p>
-                        Color Clicker is game designed to test your vision and reaction time. 
-                        In this game, the player must click the cube that doesn't belong to the rest.
-                        While some may be obvious, others pose a true challenge. 
-                        Color Clicker is written in Python and uses the Pygame library.
-                    </p><br><br>
-                </div>
-                <div>
-                    <h3>Hashing and Simplified Cryptocurrency</h3>
-                    <h6>Assignment completed in CSCE 221: Data Structures and Algorithms</h6>
-                    <p>
-                        This program inserts data into a hashtable using a polynomial rolling hash function. 
-                        Two different implementations of the hashtable are used to avoid collisions, the first being linear probing and the second being a chaining hashtable.
-                        The goal for this program is to create an even distribution of collisions.
-                        <br><br>
-                        The second half of this program is to use hashing to create s simplified version of a cryptocurrency blockchain.
-                        This applications reads in transactions (strings) from the command line to create a blockchain. 
-                        The transactions are then hashed and paired with a nonce to validate them according to the rules of the blockchain.
-                        The constraint for this blockchain is simple to allow for quick mining method.
-                    </p><br>
-                </div>
+
+                <!-- <div class="main-area" id="main-area-id" role="main">
+                </div> -->
 
             </div>
-            <a class="jumpPoint" id="jumpToContacts"></a>
-            <div class="part3">
-                <h2>Contact</h2>
-                <p>
-                    Email addresses: hunter.finch@icloud.com (preferred)
-                    <br>
-                    hf9154@tamu.edu
-                    <br>
-                    <br>
-                    GitHub: <a id= "githubLink" target= "_blank" href = "https://github.com/hfinchy12">hfinchy12</a>
-                    <br>
-                    <br>
-                    LinkedIn: <a id = "linkedinLink" target= "_blank" href="https://www.linkedin.com/in/hunter-finch">hunter-finch</a>
-                </p>
-            </div>
-            </main>
-    </div>
-        
-    <div class="credits">
-        <p>Background picture from:
-            <a href="https://cutewallpaper.org/download.php?file=/21/minimalist-star-wars-wallpaper/Download-2560x1440-Wallpaper-X-Wing-Aircraft-Star-Wars-.jpg" id="cred-link"> CuteWallpaper</a>
-        </p>
-    </div>
-        
-        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
+        </div>
 
+    </div>
 </body>
 
 </html>

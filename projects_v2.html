@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <title>Hunter Finch</title>
+    <script>
+        var theme = document.getElementsByTagName('link')[0];
+        theme.setAttribute('href', localStorage.getItem('css'));
+    </script>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <nav class='navnav'>
+            <ul class="navitems">
+                <li><a href="./index.html">Home</a></li>
+                <li id="projectlink"><a href="#">Projects</a></li>
+                <li><a href="./skills.html">Skills</a></li>
+                <li><a href="./service.html">Service</a></li>
+            </ul>
+
+        </nav>
+        <!-- <nav class="togglebutton">
+            <ul class="toggle">
+                <li><a href="#">Toggle!</a></li>
+            </ul>
+        </nav> -->
+    </div>
+
+    <div class="hor_bodyarea">
+        <div class="hor_wrapper">
+            <div class="infopanel" id="part1">
+                <div class="desc">
+                    <h2 class="pname">Aggie Ticket Assistant</h2>
+                    <h6>Work in Progress</h6>
+                    <p>
+                        Working with a team to develop a mobile application to assist Aggies with pulling tickets for football games. The main feature of this application is a ticket-pulling algorithm designed to ensure that students get the best seats possible. The application
+                        is meant to be easy to use while still being useful to us Aggies. Lots of other informations is also displayed to give Aggies the best game-day experience possible.
+                        <br><br> This application uses React Native, HTML, CSS, and Javascript for the front-end. The back-end is made up of React Native, Javascript, and is supported by Firebase database. Our team is using Git/Github as a version control
+                        platform.
+                    </p>
+                </div>
+            </div>
+            <div class="infopanel" id="part2">
+                <div class="desc">
+                    <h2>Dungeon Crawler</h2>
+                    <h6>Assignment completed in CSCE 121: Programming Design and Concepts</h6>
+                    <h6><a href="https://github.com/hfinchy12/DungeonCrawler" target="_blank" id="githublink">Available on GitHub</a></h6>
+                    <p>
+                        Dungeon Crawler is a game where the explorer must escape from the dungeon he is trapped in. Within the dungeon there are deadly monsters, treasures, and a couple of magical surprises. With a few different map choices, the dungeons can pose a challenge
+                        to even the most skilled explorers.
+                    </p>
+                </div>
+            </div>
+            <div class="infopanel" id="part3">
+                <div class="desc">
+                    <h2>Network Router Simulator</h2>
+                    <h6>Assignment completed in CSCE 221: Data Structures and Algorithms</h6>
+                    <h6><a href="https://github.com/hfinchy12/Network-Router" target="_blank" id="githublink">Available on GitHub</a></h6>
+                    <p>
+                        Simulated a network packet processing queue in C++. <br> This program reads in sample network packets and processes the packets into a linked list. This program uses: dynamic memory, linked list, queues, file input, classes, templating,
+                        and data filtering. Packets are read in through a text file and then processesd to create a "NetworkPacket" object. Those objects are then sorted based on their content as well as scanned for suspicious input/blocked addresses.
+                        A linked list is used as the queue to demonstrate a "first-in first-out" approach to handling data.
+                    </p>
+                </div>
+            </div>
+            <div class="infopanel" id="part4">
+                <div class="desc">
+                    <h2>Color Clicker</h2>
+                    <h6><a href="https://github.com/hfinchy12/ColorClicker" target="_blank" id="githublink">Available on GitHub</a></h6>
+                    <p>
+                        Color Clicker is game designed to test your vision and reaction time. In this game, the player must click the cube that doesn't belong to the rest. While some may be obvious, others pose a true challenge. Color Clicker is written in Python and uses the
+                        Pygame library.
+                    </p>
+                </div>
+            </div>
+            <div class="infopanel" id="part5">
+                <div class="desc">
+                    <h2>Hashing and Simplified Cryptocurrency</h2>
+                    <h6>Assignment completed in CSCE 221: Data Structures and Algorithms</h6>
+                    <p>
+                        This program inserts data into a hashtable using a polynomial rolling hash function. Two different implementations of the hashtable are used to avoid collisions, the first being linear probing and the second being a chaining hashtable. The goal for this
+                        program is to create an even distribution of collisions.
+                        <br><br> The second half of this program is to use hashing to create s simplified version of a cryptocurrency blockchain. This applications reads in transactions (strings) from the command line to create a blockchain. The transactions
+                        are then hashed and paired with a nonce to validate them according to the rules of the blockchain. The constraint for this blockchain is simple to allow for quick mining method.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="empty">
+        <div></div>
+    </div> -->
+</body>
+
+</html>
