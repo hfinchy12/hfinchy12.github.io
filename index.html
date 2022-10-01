@@ -7,31 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hunter Finch - Home</title>
     <link href="styles.css" rel="stylesheet">
-    <!-- <link href="styles2.css" rel="stylesheet"> -->
-    <!-- <link rel="icon" type="image/x-icon" href="/images/favicon.ico"> -->
-    <script>
-        var theme = document.getElementsByTagName('link')[0];
-        theme.setAttribute('href', localStorage.getItem('css'));
 
-        function loadstyle() {
-            if (localStorage.getItem('css') == null) { // if no prev style, load default
-                theme.setAttribute('href', 'styles.css');
-            } else {
-                theme.setAttribute('href', localStorage.getItem('css'));
-            }
-        }
-
-        function toggleTheme() {
-            if (theme.getAttribute('href') == 'styles.css') {
-                localStorage.setItem("css", "styles2.css");
-                theme.setAttribute('href', localStorage.getItem("css"));
-            } else {
-                localStorage.setItem("css", "styles.css");
-                theme.setAttribute('href', localStorage.getItem("css"));
-            }
-        }
-        loadstyle(); // do right away
-    </script>
 </head>
 
 <body id="body">
@@ -46,9 +22,9 @@
                 </ul>
 
             </nav>
-            <!-- <nav class="togglebutton">
+            <nav class="togglebutton">
                 <button class="toggle" onclick="toggleTheme()">Toggle!</button>
-            </nav> -->
+            </nav>
         </div>
 
         <div class="about_wrapper">
