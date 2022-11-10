@@ -410,6 +410,16 @@ body {
 
 #bottomhalf li {
     flex: 1;
+    margin-bottom: 20px;
+}
+
+#middlehalf {
+    display: flex;
+    flex-direction: row;
+}
+
+#middlehalf li {
+    flex: 1;
 }
 
 .tools li {
